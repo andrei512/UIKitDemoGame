@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *scoreLabel;
+@property (nonatomic) int score;
+
+- (IBAction)didTapFunnyGuy:(UIButton *)funnyGuy;
+
+
 @end
