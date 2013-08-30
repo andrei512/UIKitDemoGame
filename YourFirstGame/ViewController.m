@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+FastAccess.h"
 
 @interface ViewController ()
 
@@ -21,20 +22,12 @@
 }
 
 - (void)moveFunnyGuyToRandomLocation:(UIButton *)funnyGuy {
-    CGRect frame = funnyGuy.frame;
-    
-    CGFloat viewWidth = self.view.frame.size.width;
-    CGFloat viewHeight = self.view.frame.size.height;
-    
-    CGFloat funnyGuyWidth = funnyGuy.frame.size.width;
-    CGFloat funnyGuyHeight = funnyGuy.frame.size.height;
-    
-    frame.origin.x = rand() % (int)(viewWidth - funnyGuyWidth);
-    frame.origin.y = rand() % (int)(viewHeight - funnyGuyHeight);
+    CGFloat newX = rand() % (int)(self.view.width - funnyGuy.width);
+    CGFloat newY = rand() % (int)(self.view.height - funnyGuy.height);
     
     [UIView animateWithDuration:0.3
                      animations:^{
-                         funnyGuy.frame = frame;
+                         funnyGuy.origin = CGPointMake(newX, newY);
                      }];
 }
 
