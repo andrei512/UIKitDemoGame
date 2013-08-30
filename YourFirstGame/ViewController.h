@@ -11,7 +11,13 @@
 @interface ViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UILabel *scoreLabel;
+@property (nonatomic, weak) IBOutlet UIButton *funnyGuy;
+
 @property (nonatomic) int score;
+
+@property (nonatomic, strong) NSDate *lastMoved;
+
+@property (nonatomic, strong) NSTimer *timer;
 
 - (IBAction)didTapFunnyGuy:(UIButton *)funnyGuy;
 
