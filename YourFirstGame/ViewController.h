@@ -15,4 +15,6 @@
 
 - (IBAction)didTapFunnyGuy:(UIButton *)funnyGuy;
 
+- (IBAction)didTouchView:(UITapGestureRecognizer *)tapGesture;
+
 @end
