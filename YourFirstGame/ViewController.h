@@ -15,5 +15,4 @@
 
 - (IBAction)didTapFunnyGuy:(UIButton *)funnyGuy;
 
-
 @end

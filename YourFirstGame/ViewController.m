@@ -32,7 +32,10 @@
     frame.origin.x = rand() % (int)(viewWidth - funnyGuyWidth);
     frame.origin.y = rand() % (int)(viewHeight - funnyGuyHeight);
     
-    funnyGuy.frame = frame;
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         funnyGuy.frame = frame;
+                     }];
 }
 
 - (void)updateScore {
